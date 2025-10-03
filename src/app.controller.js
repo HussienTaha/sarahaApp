@@ -21,7 +21,7 @@ app.use(cors({
 
 const limiter = rateLimit({
   windowMs:  60 * 1000, // 15 دقيقة
-  max: 5, // أقصى عدد requests لكل IP في الفترة دي
+  max: 100, // أقصى عدد requests لكل IP في الفترة دي
   message: "Too many requests from this IP, please try again later."
 });
 app.use(limiter);
