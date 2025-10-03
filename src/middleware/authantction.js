@@ -28,9 +28,9 @@ else{
 }
 
     const decoded = jwt.verify(token, segnature);
-    console.log(decoded);
+    // console.log(decoded);
 
-    console.log(segnature);
+    // console.log(segnature);
     
     // revoked token 
     const revoked =await RevokedTokenModel.findOne({tokenId:decoded.jti}) 

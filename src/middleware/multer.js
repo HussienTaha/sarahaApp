@@ -40,7 +40,7 @@ export const multerUploadLocal = (custemPrameter,custemExtation=[]) => {
       cb(null, fullPath); // هنا بيتخزن في فولدر uploads
     },
     filename: function (req, file, cb) {
-      console.log(file); // هتلاقي هنا mimetype, originalname, إلخ
+      // console.log(file); // هتلاقي هنا mimetype, originalname, إلخ
   const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9)
       cb(null, uniqueSuffix + '-' +file.originalname ); // الاسم اللي هيتخزن بيه
     },

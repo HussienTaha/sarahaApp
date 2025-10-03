@@ -173,11 +173,11 @@ export const refreshtoken = async (req, res, next) => {
     } else {
       return res.status(401).json({ message: " invalid prefix  token " });
     }
-    console.log(segnature);
-console.log({ prefix, token, segnature});
+    // console.log(segnature);
+// console.log({ prefix, token, segnature});
 
     const decoded =jwt.verify(token,segnature);
-    console.log(decoded);
+    // console.log(decoded);
     // revoked token
     const revoked = await RevokedTokenModel.findOne({ tokenId: decoded.jti });
     if (revoked) {
@@ -669,7 +669,7 @@ export const updateProfileImage = async (req, res, next) => {
     );
 
 
-    console.log(req.user);
+    // console.log(req.user);
     
 
     return res.status(200).json({ message: "success", user: updatedUser });
