@@ -1,0 +1,923 @@
+{
+	"info": {
+		"_postman_id": "21904783-ab43-41aa-bdb5-d3bc34bd31dd",
+		"name": "saraha_app",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "41757967"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/user/Desktop/WhatsApp Image 2025-05-11 at 18.26.26_ef1a4344.jpg"
+								},
+								{
+									"key": "Name",
+									"value": "Hussein",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "hussien11128144@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "text"
+								},
+								{
+									"key": "confirmPassword",
+									"value": "123456",
+									"type": "text"
+								},
+								{
+									"key": "gender",
+									"value": "male",
+									"type": "text"
+								},
+								{
+									"key": "role",
+									"value": "user",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "01000000000",
+									"type": "text"
+								},
+								{
+									"key": "age",
+									"value": "25",
+									"type": "text"
+								},
+								{
+									"key": "",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseURL}}/users/signup",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"users",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "signin",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n \"email\": \"hussien11128144@gmail.com\",\r\n  \"password\": \"123456\"\r\n\r\n \r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://saraha-app-bay.vercel.app/users/signin",
+							"protocol": "https",
+							"host": [
+								"saraha-app-bay",
+								"vercel",
+								"app"
+							],
+							"path": [
+								"users",
+								"signin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "gitprofile",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true,
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGE0ZDg0ZmYwNzc4ZWMxMDA4ZWU3MTAiLCJlbWFpbCI6Imh1c3NpZW4xMTExMjU4MUBnbWFpbC5jb20iLCJpYXQiOjE3NTU3MTczNDUsImV4cCI6MTc1NTcxOTE0NSwianRpIjoiSWRBaEprYTdkemx6UnpseTloMEpaIn0.KUENWUBVCxk5hXBdMTYgvCjiZJ548dfq3Mw-5riSXnU",
+								"type": "text"
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Content-Type",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n  \"email\": \"hussein4@example.com\",\r\n  \"password\": \"123456\"\r\n\r\n \r\n}\r\n"
+						},
+						"url": {
+							"raw": "{{baseURL}}/users/profile",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"users",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "confermed",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": " bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODgyM2IzM2Q0M2YxZDdlMWQ1NmU4MTAiLCJlbWFpbCI6Imh1c3NlaW42MUBleGFtcGxlLmNvbSIsImlhdCI6MTc1MzM2NTMyMywiZXhwIjoxNzUzMzY3MTIzfQ.SThZjf2C3H015MVZ5BDXdWChZqoIP4vpeaB_iE-E7dA",
+								"type": "text"
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Content-Type",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n  \"email\": \"hussein4@example.com\",\r\n  \"password\": \"123456\"\r\n\r\n \r\n}\r\n"
+						},
+						"url": {
+							"raw": "{{baseURL}}/users/confermedEmail",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"users",
+								"confermedEmail"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "send-code",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n  \"email\": \"hussien1111258@gmail.com\"\r\n\r\n\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/users/send-code",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"users",
+								"send-code"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "confirm-code",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n  \"email\": \"hussien1111258@gmail.com\",\r\n  \"code\": \"692561\"\r\n\r\n\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/users/confirm-code",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"users",
+								"confirm-code"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGIxOWU5MDA1YTU1NmJjYjE5NGEwMzQiLCJlbWFpbCI6Imh1c3NpZW4xMTEyODFAZ21haWwuY29tIiwiaWF0IjoxNzU2NDcxMDA0LCJleHAiOjE3NTY0NzI4MDQsImp0aSI6IktrZXh3TndCTU95ckZIdGcxaTFsSSJ9.DEUiyDjtRnDAZCB5M2Iu_HrONAhf5cmU3B27pvglSEg",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n\r\n \r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/users/logout",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"users",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "refreshtoken",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODkyNmQ3ZTQzMDkxMDIxNTYyNTM5YTEiLCJlbWFpbCI6Imh1c3NpZW4xMTExMTI1NThAZ21haWwuY29tIiwiaWF0IjoxNzU0ODI0ODc1LCJleHAiOjE3NTQ4Mjg0NzUsImp0aSI6Ik94VjRZNTZJenpNb2I2c2t6MlNmXyJ9.cxkCDoxMk-NDDF7B2nZWYzBr_hdnxxgtNlbcYonQ30A",
+								"type": "text"
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Content-Type",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n\"email\": \"hussien1111258@gmail.com\",\r\n\"password\": \"123456\"\r\n\r\n \r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/users/refreshtoken",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"users",
+								"refreshtoken"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updatepasswoed",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": " bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODhmNjEyNGI3M2JiYjQxMTI2Nzk4NGIiLCJlbWFpbCI6Imh1c3NpZW4xMTExMjU4QGdtYWlsLmNvbSIsImlhdCI6MTc1NDM0MTM2OSwiZXhwIjoxNzU0MzQzMTY5LCJqdGkiOiI5YVFiVGRMdndpaktLMFJGQzBpNGYifQ.V-GKEHzq2ZTar6cpCE8nmh3rsLTwfdPrRQd31FWXtlA",
+								"type": "text"
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Content-Type",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"oldPassword\": \"654321\",\r\n  \"newPassword\": \"654325\",\r\n  \"confirmPassword\":\"654325\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/users/changePassword",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"users",
+								"changePassword"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "forgetPassword",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": " bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODhmNjEyNGI3M2JiYjQxMTI2Nzk4NGIiLCJlbWFpbCI6Imh1c3NpZW4xMTExMjU4QGdtYWlsLmNvbSIsImlhdCI6MTc1NDMyMzgxMCwiZXhwIjoxNzU0MzI1NjEwLCJqdGkiOiI5T19UaG5DSXBUaGJYZW1SZmQtaXYifQ.eWycjve32WyrsvAqlHno6wsvxFnxI3FwuMFuGO3zGiU",
+								"type": "text"
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Content-Type",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"hussien1111258@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/users/forgetPassword",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"users",
+								"forgetPassword"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "auth/verify-otp",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": " bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODhmNjEyNGI3M2JiYjQxMTI2Nzk4NGIiLCJlbWFpbCI6Imh1c3NpZW4xMTExMjU4QGdtYWlsLmNvbSIsImlhdCI6MTc1NDMyMzgxMCwiZXhwIjoxNzU0MzI1NjEwLCJqdGkiOiI5T19UaG5DSXBUaGJYZW1SZmQtaXYifQ.eWycjve32WyrsvAqlHno6wsvxFnxI3FwuMFuGO3zGiU",
+								"type": "text"
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Content-Type",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"email\": \"hussien1111258@gmail.com\",\r\n  \"otp\": \"123456\",\r\n  \"newPassword\": \"7oos\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/users/auth/verify-otp",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"users",
+								"auth",
+								"verify-otp"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateprofile",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": " bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODkyMGE1MjFiNGY2Nzg5MTkyZmM1MDQiLCJlbWFpbCI6Imh1c3NpZW4xMTExMjU4QGdtYWlsLmNvbSIsImlhdCI6MTc1NDQwMTQ5NSwiZXhwIjoxNzU0NDAzMjk1LCJqdGkiOiJYb1gyVkVyeDh6bDZvMkNWaGlIcnYifQ.5SzWsJlTs1RjfIkONrj4QODZRAB-Rsbp8rFP8lsaiEA",
+								"type": "text"
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Content-Type",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"Name\": \"Hussein Taha\",\r\n  \"age\": 25,\r\n  \"gender\": \"male\",\r\n  \"phone\": \"0123456789\"\r\n\r\n \r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/users/updateProfile",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"users",
+								"updateProfile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getprofiledata",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "freeze",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "admin eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODkyMGE1MjFiNGY2Nzg5MTkyZmM1MDQiLCJlbWFpbCI6Imh1c3NpZW4xMTExMjU4QGdtYWlsLmNvbSIsImlhdCI6MTc1NDQwMzcwOCwiZXhwIjoxNzU0NDA1NTA4LCJqdGkiOiJqdWdJX0ZBWlRnMExRbkxxUkNpNUMifQ.-o_HjlWLhw9XSAsXWfihaJdmFzpP_77I2LEUBBxa_2A",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n\r\n\r\n\r\n\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/users/freeze/68920b6e1b4f6789192fc50f",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"users",
+								"freeze",
+								"68920b6e1b4f6789192fc50f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "unfreeze",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "admin eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODkyMGE1MjFiNGY2Nzg5MTkyZmM1MDQiLCJlbWFpbCI6Imh1c3NpZW4xMTExMjU4QGdtYWlsLmNvbSIsImlhdCI6MTc1NDQwMzcwOCwiZXhwIjoxNzU0NDA1NTA4LCJqdGkiOiJqdWdJX0ZBWlRnMExRbkxxUkNpNUMifQ.-o_HjlWLhw9XSAsXWfihaJdmFzpP_77I2LEUBBxa_2A",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n\r\n\r\n\r\n\r\n    \r\n}"
+						},
+						"url": {
+							"raw": "{{baseURL}}/users/unfreeze/68920b6e1b4f6789192fc50f",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"users",
+								"unfreeze",
+								"68920b6e1b4f6789192fc50f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateProfileImage",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGEzM2ZmYjZkOGVkMmQxMGMwM2ZjMzEiLCJlbWFpbCI6Imh1c3NpZW4xMTExMjU4QGdtYWlsLmNvbSIsImlhdCI6MTc1NTUzMTg2MywiZXhwIjoxNzU1NTMzNjYzLCJqdGkiOiIwNW8wMm5pTVNLLUVyRkxkc1lOSXQifQ.Mq9FBrqUiGWpVqcvY-ejMiwbtcEwKKTTayV2xZWa1zE",
+								"type": "text"
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Content-Type",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/user/Desktop/Hussien taha hussien.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseURL}}/users/updateProfileImage",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"users",
+								"updateProfileImage"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteProfileImagequest",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGEzM2ZmYjZkOGVkMmQxMGMwM2ZjMzEiLCJlbWFpbCI6Imh1c3NpZW4xMTExMjU4QGdtYWlsLmNvbSIsImlhdCI6MTc1NTYzMzU3MiwiZXhwIjoxNzU1NjM1MzcyLCJqdGkiOiJTeVI5a3BlVkJUNlFjM2FtUHh2TG4ifQ.ozXUEdMAsWLa9i4UKvpetxBRO4gXHnUTdx1kQnZkp-A",
+								"type": "text"
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Content-Type",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/user/Desktop/Hussien taha hussien.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseURL}}/users/deleteProfileImage",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"users",
+								"deleteProfileImage"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "message",
+			"item": [
+				{
+					"name": "createmessage",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": " bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODhmNjEyNGI3M2JiYjQxMTI2Nzk4NGIiLCJlbWFpbCI6Imh1c3NpZW4xMTExMjU4QGdtYWlsLmNvbSIsImlhdCI6MTc1NDMxNjMzNiwiZXhwIjoxNzU0MzE4MTM2LCJqdGkiOiJ6eXZJeHhHVUVxdXFPVlYtTTNDMEwifQ.Xxmd4Uc6JOxQ2a3apnGZGdgj8p2GWEaqXzgnXYF008I",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Content-Type",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n  \"content\": \"Hello from Saraha\",\r\n  \"userId\": \"68a33ffb6d8ed2d10c03fc31\"\r\n}\r\n\r\n\r\n \r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/messages/send",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"messages",
+								"send"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllMessage",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGEzM2ZmYjZkOGVkMmQxMGMwM2ZjMzEiLCJlbWFpbCI6Imh1c3NpZW4xMTExMjU4QGdtYWlsLmNvbSIsImlhdCI6MTc1NTUzMDkxNSwiZXhwIjoxNzU1NTMyNzE1LCJqdGkiOiJLc2Z1STdCYW9GWm81WGlYeUJUeXMifQ.PKko3z4_u1zC0mbTvbQaNbdKUn0sG3r8ivQhzMi_Arg",
+								"type": "text"
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Content-Type",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n  \"content\": \"Hello from Saraha\",\r\n  \"userId\": \"66b7b7f4d982c8adf1e3a145\"\r\n}\r\n\r\n\r\n \r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/messages/messages",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"messages",
+								"messages"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getonemessage",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": " bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGEzM2ZmYjZkOGVkMmQxMGMwM2ZjMzEiLCJlbWFpbCI6Imh1c3NpZW4xMTExMjU4QGdtYWlsLmNvbSIsImlhdCI6MTc1NTUzMDkxNSwiZXhwIjoxNzU1NTMyNzE1LCJqdGkiOiJLc2Z1STdCYW9GWm81WGlYeUJUeXMifQ.PKko3z4_u1zC0mbTvbQaNbdKUn0sG3r8ivQhzMi_Arg",
+								"type": "text"
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Content-Type",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n  \"content\": \"Hello from Saraha\",\r\n  \"userId\": \"66b7b7f4d982c8adf1e3a145\"\r\n}\r\n\r\n\r\n \r\n\r\n"
+						},
+						"url": {
+							"raw": "{{baseURL}}/messages/messages/68a34707269f98e72e02f371",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"messages",
+								"messages",
+								"68a34707269f98e72e02f371"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteAllMessages",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGE0ZDg0ZmYwNzc4ZWMxMDA4ZWU3MTAiLCJlbWFpbCI6Imh1c3NpZW4xMTExMjU4MUBnbWFpbC5jb20iLCJpYXQiOjE3NTU4NTc4MTQsImV4cCI6MTc1NTg1OTYxNCwianRpIjoianVodE1kN3l3S0VwV2daeXZSdERzIn0.-F7WZDPk1wJ2zbHYvtVzKYz8Pj0KGbbhHH_R379gO-8",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n \"email\": \"hussien1111258@gmail.com\",\r\n  \"password\": \"123456\"\r\n\r\n \r\n}\r\n"
+						},
+						"url": {
+							"raw": "{{baseURL}}/messages/deleteAllMessages",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"messages",
+								"deleteAllMessages"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseURL",
+			"value": "http://localhost:3000"
+		},
+		{
+			"key": "token\n",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGEzM2ZmYjZkOGVkMmQxMGMwM2ZjMzEiLCJlbWFpbCI6Imh1c3NpZW4xMTExMjU4QGdtYWlsLmNvbSIsImlhdCI6MTc1NTUzMDkxNSwiZXhwIjoxNzU1NTMyNzE1LCJqdGkiOiJLc2Z1STdCYW9GWm81WGlYeUJUeXMifQ.PKko3z4_u1zC0mbTvbQaNbdKUn0sG3r8ivQhzMi_Arg",
+			"type": "string"
+		}
+	]
+}
